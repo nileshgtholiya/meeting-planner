@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:planner-test;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  h2:
+    console:
+      enabled: false
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+app:
+  jwt:
+    secret: "local-dev-secret-change-me-please-make-it-long-enough-256bit"
+    expiration-ms: 86400000
+  storage:
+    dir: ./build/test-uploads
