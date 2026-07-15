@@ -1,0 +1,13 @@
+target/
+build/
+!.mvn/wrapper/maven-wrapper.jar
+node_modules/
+dist/
+.angular/
+uploads/
+data/
+*.mv.db
+*.trace.db
+*.log
+.DS_Store
+Meeting_Planner_Coding_Exercise.pdf
