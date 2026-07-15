@@ -2,12 +2,16 @@ package com.planner.meeting;
 
 import com.planner.user.User;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "meetings")
 public class Meeting {
@@ -50,28 +54,4 @@ public class Meeting {
 
     @Column(nullable = false)
     private Instant createdAt = Instant.now();
-
-    public Long getId() { return id; }
-    public String getTitle() { return title; }
-    public void setTitle(String v) { this.title = v; }
-    public String getDescription() { return description; }
-    public void setDescription(String v) { this.description = v; }
-    public String getLocation() { return location; }
-    public void setLocation(String v) { this.location = v; }
-    public LocalDateTime getStartTime() { return startTime; }
-    public void setStartTime(LocalDateTime v) { this.startTime = v; }
-    public LocalDateTime getEndTime() { return endTime; }
-    public void setEndTime(LocalDateTime v) { this.endTime = v; }
-    public String getTimezone() { return timezone; }
-    public void setTimezone(String v) { this.timezone = v; }
-    public Recurrence getRecurrence() { return recurrence; }
-    public void setRecurrence(Recurrence v) { this.recurrence = v; }
-    public MeetingStatus getStatus() { return status; }
-    public void setStatus(MeetingStatus v) { this.status = v; }
-    public User getOwner() { return owner; }
-    public void setOwner(User v) { this.owner = v; }
-    public List<Participant> getParticipants() { return participants; }
-    public void setParticipants(List<Participant> v) { this.participants = v; }
-    public Instant getCreatedAt() { return createdAt; }
-    public void setCreatedAt(Instant v) { this.createdAt = v; }
 }
